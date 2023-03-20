@@ -1,0 +1,20 @@
+# 应用名称
+spring:
+  application:
+    name: MybatisPlus
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatis_plus?serverTimezone=UTC&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true
+    password: forevergl..
+    username: root
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  #    设置mybatisplus的全局配置
+  global-config:
+    db-config:
+      #      设置实体类所对应表的统一前缀
+      table-prefix: t_
+      #      设置统一的主键生成策略
+      id-type: auto
