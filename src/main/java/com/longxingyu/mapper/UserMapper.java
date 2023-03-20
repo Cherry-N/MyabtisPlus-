@@ -24,9 +24,6 @@ public interface UserMapper extends BaseMapper<User> {
     List<User> selectAllByAge(@Param("age") Integer age);
 
     List<User> listAge();
-
-    @Select("select * from user where id = #{id}")
-    List<User> selectAll();
 }
 
 
