@@ -5,6 +5,7 @@ import com.longxingyu.pojo.User;
 import org.apache.ibatis.annotations.MapKey;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 import java.util.Map;
@@ -23,6 +24,9 @@ public interface UserMapper extends BaseMapper<User> {
     List<User> selectAllByAge(@Param("age") Integer age);
 
     List<User> listAge();
+
+    @Select("select * from user where id = #{id}")
+    List<User> selectAll();
 }
 
 
